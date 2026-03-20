@@ -1,0 +1,429 @@
+<!DOCTYPE html> <!-- diz ao navegador que é um site em HTML -->
+<html lang="pt-br"> <!-- começa o site e define o idioma como português -->
+<head> <!-- cabeçalho que nao aparece na tela -->
+    <meta charset="UTF-8"> <!-- Permite usar acentos (á, é, ç) caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz o site funcionar bem no celular (responsivo) -->
+    <title>Game Games</title> <!-- Nome da aba do navegador -->
+
+    <link rel="stylesheet" href="css/style.css"> <!-- Conecta o CSS ao HTML (onde está o design) -->
+
+    <!-- Fonte Importa a fonte “Poppins” do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+
+<body> <!-- corpo do sistema -->
+
+<!-- HEADER Cabeçalho que aparaece na tela -->
+<header class="top-header">
+
+    <div class="logo"> <!-- Divisão para o logo -->
+        <img src="img/logogamegames.png" alt="Game Games Logo">
+    </div>
+
+    <input type="text" placeholder="Pesquise Aqui..." class="procurar-bar">
+
+    <div class="icons"> <!-- Divisão para os icons -->
+
+        <div class="icon">
+            <a href="contato.html">
+                <img src="img/logoctt.png" alt="Contato">
+            </a>
+        </div>
+
+        <div class="icon">
+            <img src="img/logolocalizacao.png" alt="Localização">
+        </div>
+
+        <div class="icon">
+            <img src="img/logocarrinho.png" alt="Carrinho">
+        </div>
+
+        <div class="icon">
+            <a href="conta.html">
+                <img src="img/logoconta.png" alt="Usuário">
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- MENU DE NAVEGAÇÃO -->
+<nav class="menu">
+    <a href="index.html" class="active">HOME</a>
+    <a href="starwars.html">STAR WARS</a>
+    <a href="colecionadores.html">COLECIONADORES</a>
+    <a href="novidades.html">NOVIDADES</a>
+</nav>
+
+
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="carrosel"> <!-- Formato carrosel (fica passando varias imagens) -->
+
+        <img src="img/banner1.png" class="slide">
+        <img src="img/banner2.jpg" class="slide">
+        <img src="img/banner3.gif" class="slide">
+
+    </div>
+
+    <div class="overlay"></div> <!-- Camada por cima (escurecer, efeito visual) -->
+</section>
+
+
+
+<!-- DESCONTOS -->
+<section class="descontos">
+    <div class="desconto">
+        <strong>10% DESCONTO</strong>
+        <p>pix/boleto/deposito</p>
+    </div>
+
+    <div class="desconto">
+        <strong>10% DESCONTO</strong>
+        <p>via bitcoin</p>
+    </div>
+
+    <div class="desconto">
+        <strong>9X SEM JUROS</strong>
+        <p>cartão crédito/paypal</p>
+    </div>
+
+    <div class="desconto">
+        <strong>FRETE GRÁTIS</strong>
+        <p>sul e sudeste</p>
+    </div>
+
+    <div class="desconto"> <!-- beneficios / desconto = benefit -->
+        <strong>GARANTIA</strong>
+        <p>de 12 meses</p>
+    </div>
+</section>
+
+
+
+<!-- MARCAS -->
+<section class="marcas">
+    <h2>NAVEGUE PELAS MARCAS</h2>
+
+    <div class="marca-container">
+        <button class="seta">&#10094;</button>
+
+        <div class="marca"> <!-- brand = maarca -->
+            <img src="img/logorockstar.png" alt="Rockstar">
+        </div>
+
+        <div class="marca">
+            <img src="img/logolego.png" alt="Lego">
+        </div>
+
+        <div class="marca">
+            <img src="img/logomarvel.png" alt="Marvel">
+        </div>
+
+        <div class="marca">
+            <img src="img/sonylogo.png" alt="Sony">
+        </div>
+
+        <button class="seta">&#10095;</button> <!-- Botão (setas do carrossel) -->
+    </div>
+</section>
+
+
+
+<!-- MAIS VENDIDOS FUNKO -->
+<section class="produtos">
+    <h2>MAIS VENDIDOS EM FUNKO</h2>
+
+    <div class="produto-container">
+
+        <div class="produto-card">
+            <img src="img/funkopopNBA.webp" alt="">
+            <h3>Funko Pop NBA Kevin Durant</h3>
+            <p class="preco">R$ 289,00</p>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopCharmander.jpg" alt="">
+            <h3>Funko Pop Charmander</h3>
+            <p class="preco">R$ 289,00</p>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopGengar.webp" alt="">
+            <h3>Funko Pop Gengar</h3>
+            <p class="preco">R$ 289,00</p>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopDaenerys.webp" alt="">
+            <h3>Funko Pop Daenerys</h3>
+            <p class="preco">R$ 289,00</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- MAIS VENDIDOS GERAL -->
+<section class="produtos">
+    <h2>MAIS VENDIDOS</h2>
+
+    <div class="produto-container">
+
+        <div class="produto-card">
+            <img src="img/controleJoy-Con.jpg" alt="">
+            <h3>Controle Joy-Con</h3>
+            <p class="parcelamento">9x de R$ 66,22</p>
+            <p class="preco">R$ 598,00</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/joystickExtreme3D.webp" alt="">
+            <h3>Joystick Extreme 3D</h3>
+            <p class="parcelamento">9x de R$ 59,88</p>
+            <p class="preco">R$ 538,90</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkoFallout.webp" alt="">
+            <h3>Funko Fallout</h3>
+            <p class="parcelaento">9x de R$ 18,77</p>
+            <p class="preco">R$ 159,00</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/residentEvilPS5.jpg" alt="">
+            <h3>Resident Evil PS5</h3>
+            <p class="parcelamento">9x de R$ 166,44</p>
+            <p class="preco">R$ 1.499,00</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- LANÇAMENTOS -->
+<section class="produtos">
+    <h2>LANÇAMETOS</h2>
+
+    <div class="produto-container">
+
+        <div class="produto-card">
+            <img src="img/fivenights.jpg" alt="">
+            <h3>Funko Pop Five Nights At Freddy's 1086</h3>
+            <p class="installment">9x de R$ 18,77</p>
+            <p class="price">R$ 153,10</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopthepowerpuff.webp" alt="">
+            <h3>Funko Pop Powerpuff Gilrls 1981</h3>
+            <p class="installment">9x de R$ 17,66</p>
+            <p class="price">R$ 143,10</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopfoxy.webp" alt="">
+            <h3>Funko Pop Foxy</h3>
+            <p class="installment">9x de R$ 33,22</p>
+            <p class="price">R$ 269,10</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/funkopopsilenthill.jpg" alt="">
+            <h3>Funko Pop Silent Hill 2 1205</h3>
+            <p class="installment">9x de R$ 44,33</p>
+            <p class="price">R$ 359,10</p>
+            <button class="b-compra">COMPRAR</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+
+    <h2>O QUE PENSAM<br>NOSSOS CLIENTES</h2>
+
+    <div class="depoimento-container">
+
+        <div class="depoimento">
+            <img src="img/cliente1.png">
+            <h3>LORRAN</h3>
+            <span>Teixeira de Freitas - BA</span>
+            <p>
+                Minha experiência com a Game Games foi fantástica.
+                A loja possui uma grande variedade de produtos
+                e atendimento excelente. Recomendo!
+            </p>
+        </div>
+
+        <div class="depoimento">
+            <img src="img/cliente2.png">
+            <h3>MARIA LUIZA</h3>
+            <span>Maringá - PR</span>
+            <p>
+                A melhor experiência! Comprei vários produtos
+                colecionáveis e todos chegaram muito bem embalados
+                e com qualidade incrível.
+            </p>
+        </div>
+
+        <div class="depoimento">
+            <img src="img/cliente3.webp">
+            <h3>TONY</h3>
+            <span>São Paulo - SP</span>
+            <p>
+                Comprei um controle e um Funko Pop.
+                A entrega foi rápida e o produto
+                chegou perfeito. Loja muito confiável.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOBRE A LOJA -->
+<section class="sobre">
+
+    <h2>GAME GAMES</h2>
+
+    <p>
+        Muito mais do que bonecos, a tecnologia NFC presente nos bonecos
+        da Skylanders, Amiibos e Disney Infinity tem o poder de misturar
+        o mundo físico ao mundo digital. A Game Games nasceu com a missão
+        de oferecer aos fãs do mundo geek produtos exclusivos, colecionáveis
+        e games de alta qualidade.
+    </p>
+
+    <p>
+        Trabalhamos com diversas marcas renomadas e buscamos sempre trazer
+        novidades para nossos clientes. Nosso objetivo é proporcionar
+        a melhor experiência possível para todos os apaixonados por games,
+        filmes e cultura geek.
+    </p>
+
+</section>
+
+
+<!-- INFORMAÇÕES -->
+<section class="info">
+
+    <h2>O QUE PENSAM OS CLIENTES GAME GAMES</h2>
+
+    <p>
+        A Game Games é a melhor loja de games online, com preço justo e
+        diversas ofertas imperdíveis. Nossa equipe trabalha diariamente
+        para garantir produtos originais, entrega rápida e um atendimento
+        de excelência.
+    </p>
+
+    <p>
+        Oferecemos Funko Pops, jogos, consoles, acessórios e muito mais.
+        Nosso compromisso é garantir a satisfação de todos os clientes
+        e proporcionar uma experiência única no mundo gamer.
+    </p>
+
+</section>
+
+
+<!-- BOLETIM -->
+<section class="boletim">
+
+    <h3>RECEBA NOSSAS OFERTAS POR E-MAIL</h3>
+
+    <div class="boletim-box">
+        <input type="email" placeholder="Digite seu Email">
+        <button>ENVIAR</button>
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h4>CONTEÚDO</h4>
+            <ul>
+                <li>Fale Conosco</li>
+                <li>Minha Conta</li>
+                <li>A Empresa</li>
+                <li>Atendimento para Lojas</li>
+                <li>GameGames Funko Club</li>
+                <li>Garantia Trocas</li>
+                <li>Política de Troca e Devolução</li>
+                <li>Política de Entrega</li>
+                <li>Política de Privacidade</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>CATEGORIAS</h4>
+            <ul>
+                <li>Home</li>
+                <li>Star Wars</li>
+                <li>Colecionadores</li>
+                <li>Novidades</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>REDES SOCIAIS</h4>
+            <div class="social-icons">
+                <img src="img/facebook.png">
+                <img src="img/x.png">
+                <img src="img/instagram.jpg">
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>CONTATO</h4>
+            <p>Telefone:</p>
+            <p>(19) 99925-0511</p>
+
+            <p>WhatsApp:</p>
+            <p>(19) 99225-3628</p>
+
+            <p>E-mail:</p>
+            <p>contato@gamegames.com.br</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>F / DE PAGAMENTO</h4>
+            <img src="img/fdepagamento.webp" class="pagamentos">
+        </div>
+
+        <div class="footer-col">
+            <h4>SITE PROTEGIDO</h4>
+            <img src="img/pretegido.webp" class="seguro">
+        </div>
+
+    </div>
+
+    <div class="direitos">
+        © 2026 GameGames - Todos os direitos reservados.
+    </div>
+
+</footer>
+</body>
+</html>
