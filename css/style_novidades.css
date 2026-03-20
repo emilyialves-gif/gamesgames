@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1e2e;
+    color: white;
+}
+
+
+
+
+/* HEADER */
+.top-header {
+    background: #1b1d27;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+
+
+
+/*LOGO DO SITE*/
+.logo img {
+    height: 60px;
+}
+
+
+
+/*ICONS*/
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: #3a3f58;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon img {
+    width: 22px;
+}
+
+/* efeito bonito */
+.icon:hover {
+    background: #8a4fff;
+    transform: scale(1.1);
+}
+
+
+
+.procurar-bar {
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #3a3f58;
+    color: white;
+}
+
+.procurar-bar::placeholder {
+    color: #aaa;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    background: #3a3f58;
+    border-radius: 50%;
+}
+
+/* MENU */
+.menu {
+    background: #2b2f45;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 12px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu a.active {
+    color: #8a4fff;
+}
+
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #8a4fff;
+    bottom: -12px;
+    left: 0;
+    border-radius: 2px;
+}
+
+
+/*PROMOÇÕES/BENEFICIOS-------------------------------*/
+/* DESCONTOS */
+.descontos {
+    background: #25293d;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+}
+
+.desconto strong {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+
+.desconto p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/*----------------------------------*/
+
+
+
+/* BANNER */
+.banner {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* Container */
+.carrosel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ACRESCENTADO A BASE DO CABEÇALHO ------------------------------------------------*/
+
+/* BENEFÍCIOS */
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    background: #1f2233;
+    padding: 25px 0;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.beneficio span {
+    display: block;
+    font-weight: 300;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.linha {
+    width: 85%;
+    margin: 40px auto;
+    border: none;
+    border-top: 1px solid #494c63;
+}
+
+/* TÍTULO */
+.titulo-novidades {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.titulo-novidades span {
+    color: #8a4fff;
+}
+
+/* CARROSSEL */
+.carrossel-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+.seta {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.seta:hover {
+    opacity: 1;
+    color: #8a4fff;
+}
+
+/* GRID DE PRODUTOS */
+.produtos {
+    display: flex;
+    gap: 35px;
+}
+
+/* CARD */
+.card {
+    background: #2b2f45;
+    padding: 20px;
+    width: 230px;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+}
+
+.parcela {
+    font-size: 13px;
+}
+
+.preco {
+    font-size: 18px;
+    color: #8a4fff;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.pix {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background: #8a4fff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    background: #a874ff;
+}
+
+
+/*SEGUNDA PARTE NOVIDADES -------------------------------------------------------------------*/
+/* LAYOUT GERAL */
+.conteudo-novidades {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* SIDEBAR */
+.filtros {
+    width: 260px;
+    background: #1f2233;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.filtros h3 {
+    margin: 20px 0 10px;
+    font-size: 15px;
+    color: #8a4fff;
+}
+
+.filtros ul li {
+    list-style: none;
+    margin: 5px 0;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.filtros ul li:hover {
+    background: #2d3250;
+}
+
+/* AVALIAÇÃO */
+.avaliacao {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* TAMANHOS */
+.tamanhos span {
+    background: #2d3250;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tamanhos span:hover {
+    background: #8a4fff;
+}
+
+/* ÁREA PRINCIPAL */
+.area-novidades {
+    width: 100%;
+}
+
+.area-novidades .titulo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.descricao {
+    margin: 10px 0 30px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ccc;
+}
+
+/* ORDENAR */
+.ordenar select {
+    background: #2b2f45;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+/* GRID PRODUTOS */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* CARD */
+.card-nov {
+    background: #2b2f45;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* IMAGENS PADRONIZADAS */
+.card-nov img {
+    width: 100%;
+    max-width: 220px;     /* controla o tamanho máximo */
+    height: 220px;        /* força todas a ficarem do mesmo tamanho */
+    object-fit: contain;  /* evita distorção */
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.card-nov {
+    background: #2b2f45;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card-nov img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-nov h4 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.parcela {
+    font-size: 12px;
+}
+
+.preco {
+    font-size: 18px;
+    color: #8a4fff;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.pix {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.card-nov button {
+    background: #8a4fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card-nov button:hover {
+    background: #a874ff;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+    display: flex;
+    gap: 8px;
+    margin: 30px 0;
+}
+
+.paginacao span {
+    padding: 8px 12px;
+    background: #2b2f45;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.paginacao .ativo {
+    background: #8a4fff;
+}
+
+/* BANNER STAR WARS----------- */
+.banner-site {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 40px;
+}
+
+.banner-site img {
+    width: 100%;
+    max-width: 1400px;   /* não deixa o banner gigante */
+    border-radius: 15px; /* cantos arredondados */
+    display: block;
+}
+
+
+
+
+
+/* BOLETIM --------------------------------------*/
+
+.boletim {
+    background: #5b2bbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.boletim h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boletim-box {
+    display: flex;
+}
+
+.boletim-box input {
+    padding: 10px;
+    border: none;
+    width: 250px;
+}
+
+.boletim-box button {
+    background: #1b1e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* FOOTER --------------------------------------------------------*/
+
+.footer {
+    background: #1b1e2e;
+    padding: 40px 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.footer-col p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* REDES */
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 22px;
+    cursor: pointer;
+}
+
+
+/* PAGAMENTOS */
+
+.pagamentos {
+    width: 120px;
+}
+
+
+/* SITE SEGURO */
+
+.seguro {
+    width: 90px;
+}
+
+
+/* DIREITOS */
+
+.direitos {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+

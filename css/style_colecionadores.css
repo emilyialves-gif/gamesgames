@@ -1,0 +1,621 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background-color:#1b1e2e;
+    color:white;
+}
+
+
+/* HEADER */
+
+.top-header{
+    background:#1b1d27;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 40px;
+}
+
+/* LOGO */
+
+.logo img{
+    height:60px;
+}
+
+
+/* BARRA DE PESQUISA */
+
+.procurar-bar{
+    width:40%;
+    padding:10px 15px;
+    border-radius:20px;
+    border:none;
+    background:#3a3f58;
+    color:white;
+}
+
+.procurar-bar::placeholder{
+    color:#aaa;
+}
+
+
+/*ICONS*/
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: #3a3f58;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon img {
+    width: 22px;
+}
+
+.icon:hover{
+    background:#8a4fff;
+    transform:scale(1.1);
+}
+
+
+/* MENU */
+
+.menu{
+    background:#2b2f45;
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    padding:12px 0;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    position:relative;
+}
+
+.menu a.active{
+    color:#8a4fff;
+}
+
+.menu a.active::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:4px;
+    background:#8a4fff;
+    bottom:-12px;
+    left:0;
+    border-radius:2px;
+}
+
+
+/* BENEFICIOS */
+
+.descontos{
+    background:#25293d;
+    display:flex;
+    justify-content:space-around;
+    padding:20px;
+    text-align:center;
+}
+
+.desconto strong{
+    display:block;
+    font-size:14px;
+}
+
+.desconto p{
+    font-size:12px;
+    color:#bbb;
+}
+
+
+/* ---------------- COLECIONADORES ---------------- */
+
+
+/* AREA */
+
+.colecionadores-topo{
+    padding:50px 40px;
+    text-align:center;
+}
+
+
+/* TITULO */
+
+.titulo-colecionadores{
+    font-size:32px;
+    letter-spacing:4px;
+    margin-bottom:5px;
+}
+
+.subtitulo{
+    font-size:14px;
+    color:#ccc;
+    margin-bottom:40px;
+}
+
+
+/*----------linhas*/
+/* LINHAS DO TITULO COLECIONADORES */
+
+.titulo-colecionadores{
+    font-size:32px;
+    letter-spacing:4px;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.titulo-colecionadores::before,
+.titulo-colecionadores::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:#5a5f7a;
+}
+
+
+/* LINHAS DO SUBTITULO */
+
+.subtitulo{
+    font-size:14px;
+    color:#ccc;
+    margin-bottom:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.subtitulo::before,
+.subtitulo::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#5a5f7a;
+}
+
+
+
+
+/* CARROSSEL */
+
+.carrossel-colecionadores{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+
+/* PRODUTOS */
+
+.produtos-colecionadores{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+
+/* CARD */
+
+.card-col{
+    background:#2b2f45;
+    width:250px;
+    padding:25px;
+    border-radius:30px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card-col:hover{
+    transform:translateY(-5px);
+}
+
+.card-col img{
+    width:160px;
+    height:160px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px auto;
+}
+
+.card-col h4{
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.parcela{
+    font-size:13px;
+}
+
+.preco{
+    font-size:18px;
+    font-weight:700;
+    color:#8a4fff;
+}
+
+.pix{
+    font-size:12px;
+    color:#bbb;
+    margin-bottom:10px;
+}
+
+
+/* BOTÃO */
+
+.card-col button{
+    background:#8a4fff;
+    border:none;
+    padding:10px 20px;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.card-col button:hover{
+    background:#a874ff;
+}
+
+
+/* SETAS */
+
+.seta{
+    font-size:40px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+
+/* CATEGORIAS */
+
+.categorias-colecionadores{
+    margin-top:60px;
+    background:#2b2f45;
+    padding:30px;
+    border-radius:10px;
+}
+
+.categorias-colecionadores h2{
+    margin-bottom:20px;
+}
+
+
+/* GRID */
+
+.grid-categorias{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.grid-categorias div{
+    background:#3a3f58;
+    padding:15px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.grid-categorias div:hover{
+    background:#8a4fff;
+}
+
+
+
+/*---------------SEGUNDA PART COLECIONADORES--------------------*/
+
+/* AREA LOJA */
+
+.loja{
+    display:flex;
+    gap:30px;
+    padding:40px;
+}
+
+
+/* FILTROS */
+
+.filtros{
+    width:250px;
+}
+
+.filtros h3{
+    margin-bottom:20px;
+}
+
+.filtro-bloco{
+    margin-bottom:25px;
+}
+
+.filtro-bloco h4{
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.filtro-bloco button{
+    display:block;
+    width:100%;
+    margin-bottom:8px;
+    background:#3a3f58;
+    border:none;
+    color:white;
+    padding:10px;
+    cursor:pointer;
+    text-align:left;
+}
+
+.filtro-bloco button:hover{
+    background:#8a4fff;
+}
+
+
+/* AREA PRODUTOS */
+
+.produtos-area{
+    flex:1;
+}
+
+.produtos-area h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.texto-loja{
+    color:#bbb;
+    max-width:600px;
+    margin-bottom:20px;
+}
+
+
+/* ORDENAR */
+
+.ordenar{
+    margin-bottom:20px;
+}
+
+.ordenar select{
+    padding:8px;
+    background:#3a3f58;
+    color:white;
+    border:none;
+}
+
+
+/* GRID PRODUTOS */
+
+.grid-produtos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+
+/* CARD PRODUTO */
+
+.produto-card{
+    background:#2b2f45;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.produto-card img{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.produto-card h4{
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.produto-card button{
+    background:#8a4fff;
+    border:none;
+    padding:8px 20px;
+    color:white;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+/* AVALIAÇÃO */
+.avaliacao {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* TAMANHOS */
+.tamanhos span {
+    background: #2d3250;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tamanhos span:hover {
+    background: #8a4fff;
+}
+
+
+
+/*BANER-----------*/
+.area-promocional {
+    width: 100%;
+    background: linear-gradient(90deg, #1d1f2a, #11131d);
+    border-radius: 12px;
+    padding: 40px 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.promo-container h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promo-container p {
+    color: #c7c7c7;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.promo-btn {
+    display: inline-block;
+    background: #8b44ff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.promo-btn:hover {
+    background: #a566ff;
+}
+
+
+/* BOLETIM --------------------------------------*/
+
+.boletim {
+    background: #5b2bbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.boletim h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boletim-box {
+    display: flex;
+}
+
+.boletim-box input {
+    padding: 10px;
+    border: none;
+    width: 250px;
+}
+
+.boletim-box button {
+    background: #1b1e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* FOOTER --------------------------------------------------------*/
+
+.footer {
+    background: #1b1e2e;
+    padding: 40px 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.footer-col p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* REDES */
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 22px;
+    cursor: pointer;
+}
+
+
+/* PAGAMENTOS */
+
+.pagamentos {
+    width: 120px;
+}
+
+
+/* SITE SEGURO */
+
+.seguro {
+    width: 90px;
+}
+
+
+/* DIREITOS */
+
+.direitos {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+

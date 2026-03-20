@@ -1,0 +1,686 @@
+/* PARA EVITAR BUGS NO LAYOUT */
+
+* { /* aplica em TODOS os elementos */
+    margin: 0; /* tira espaçamento externo */
+    padding: 0; /* tira espaçamento interno */
+    box-sizing: border-box; /* faz largura/altura funcionar corretamente */
+}
+
+
+
+/* DEFINE COMO VAI SER O SISTEMA GERAL */
+body {
+    font-family: 'Poppins', sans-serif; /* fonte padrão*/
+    background-color: #1b1e2e; /* cor do fundo */
+    color: white; /* cor do texto */
+}
+
+
+/* HEADER - TOPO */
+.top-header {
+    background: #1b1d27;
+    display: flex; /* coloca itens lado a lado */
+    align-items: center;
+    justify-content: space-between; /* separa (logo / busca / ícones) */
+    padding: 15px 40px;
+}
+
+
+
+
+/*LOGO DO SITE*/
+.logo img {
+    height: 60px; /* Define tamanho da imagem */
+}
+
+/*ICONS*/
+.icons {
+    display: flex;
+    gap: 15px; /* Ícones lado a lado com espaço entre eles */
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: #3a3f58;
+    border-radius: 50%; /* Deixa redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon img {
+    width: 22px;
+}
+
+/* efeito bonito */
+.icon:hover {
+    background: #8a4fff;
+    transform: scale(1.1); /* Quando passa o mouse → aumenta (efeito) */
+}
+
+/* BARRA DE PESQUISA */
+.procurar-bar {
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #3a3f58;
+    color: white;
+}
+
+.procurar-bar::placeholder {
+    color: #aaa;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    background: #3a3f58;
+    border-radius: 50%;
+}
+
+
+
+/* MENU */
+.menu {
+    background: #2b2f45;
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Menu centralizado com espaço entre links */
+    padding: 12px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu a.active {
+    color: #8a4fff; /* Link ativo fica roxo */
+}
+
+.menu a.active::after { /* Cria uma linha embaixo do menu ativo */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #8a4fff;
+    bottom: -12px;
+    left: 0;
+    border-radius: 2px;
+}
+
+
+
+/* BANNER */
+.banner {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+/* Container */
+.carrosel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* Slides */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 12s infinite; /* faz trocar automaticamente */
+}
+/* Tempo individual de cada imagem */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+/* Animação - Define como a imagem aparece/desaparece */
+@keyframes fade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+/* Overlay roxo - Camada roxa por cima do banner (efeito visual) */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(138,79,255,0.6), rgba(0,0,0,0.7));
+    z-index: 2;
+}
+
+
+
+/* DESCONTOS */
+.descontos {
+    background: #25293d;
+    display: flex;
+    justify-content: space-around; /* Deixa os blocos lado a lado */
+    padding: 20px;
+    text-align: center;
+}
+.desconto strong {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+.desconto p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+
+
+/* TÍTULOS DAS SEÇÕES */
+section h2 {
+    text-align: center;
+    margin: 50px 0 25px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+
+/* MARCAS */
+.marcas {
+    padding: 20px 0;
+}
+
+.marca-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.marca {
+    background: #2b2f45;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Deixa as logos redondas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* corta a imagem no formato do círculo */
+}
+.marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* preenche sem distorcer */
+}
+.seta {
+    background: #2b2f45;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+/* PRODUTOS */
+.produtos {
+    padding: 20px 40px;
+}
+.produto-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* quebra linha quando não cabe */
+}
+.produto-card {
+    background: #25293d;
+    width: 220px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+.produto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+.produto-card h3 {
+    font-size: 13px;
+    margin: 10px 0;
+}
+.parcelamento {
+    font-size: 12px;
+    color: #aaa;
+}
+.preco {
+    color: #8a4fff;
+    font-weight: 700;
+    margin: 5px 0 15px 0;
+}
+.b-compra {
+    background: transparent;
+    border: 2px solid #8a4fff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px; /* borda arredondada */
+    cursor: pointer;
+    transition: 0.3s; /* animação quando passa o mouse fica roxo */
+}
+.b-compra:hover {
+    background: #8a4fff;
+}
+.produto-card:hover {
+    transform: translateY(-5px); /* Quando passa o mouse → sobe */
+}
+
+
+
+/* DEPOIMENTOS */
+.depoimentos {
+    background: #202333;
+    padding: 60px 40px;
+    text-align: center;
+}
+.depoimentos h2 {
+    margin-bottom: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.depoimento-container {
+    display: flex; /* Depoimentos lado a lado */
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.depoimento {
+    max-width: 220px;
+}
+.depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Foto redonda */
+    margin-bottom: 15px;
+}
+.depoimento h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.depoimento span {
+    font-size: 12px;
+    color: #aaa;
+}
+.depoimento p {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+
+
+/* SOBRE A LOJA */
+.sobre {
+    padding: 50px 60px;
+}
+.sobre h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.sobre p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+
+/* INFORMAÇÕES */
+.info {
+    padding: 40px 60px 60px 60px;
+}
+.info h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.info p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+
+/* BOLETIM */
+.boletim {
+    background: #5b2bbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+.boletim h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+.boletim-box {
+    display: flex;
+}
+.boletim-box input {
+    padding: 10px;
+    border: none;
+    width: 250px;
+}
+.boletim-box button {
+    background: #1b1e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+/* FOOTER */
+.footer {
+    background: #1b1e2e;
+    padding: 40px 60px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Colunas no rodapé */
+    gap: 40px;
+}
+.footer-col h4 {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+.footer-col p { /* Remove bolinhas da lista */
+    font-size: 12px;
+    color: #bbb;
+}
+
+
+
+/* REDES */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons img {
+    width: 22px;
+    cursor: pointer;
+}
+
+
+
+/* PAGAMENTOS */
+.pagamentos {
+    width: 120px;
+}
+
+
+
+/* SITE SEGURO */
+
+.seguro {
+    width: 90px;
+}
+
+
+
+/* DIREITOS */
+
+.direitos {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+/* PAGINA STAR WARS */
+.starwars-pagina{ /* Cria 3 colunas de produtos */
+    display:flex;
+    padding:40px;
+    gap:30px;
+}
+
+
+
+/* BANNER LATERAL */
+.starwars-banner{
+    width:200px;
+}
+
+.starwars-banner img{
+    width:100%;
+    border-radius:10px;
+}
+
+
+
+/* CONTEUDO */
+.starwars-conteudo{
+    flex:1;
+}
+
+
+
+/* FILTRO */
+.produto-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.produto-top select{
+    background:#2b2f45;
+    color:white;
+    border:none;
+    padding:8px;
+}
+
+.pages span{
+    background:#2b2f45;
+    padding:8px 12px;
+    margin-left:5px;
+    cursor:pointer;
+}
+
+
+
+/* PRODUTOS */
+.starwars-produtos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+
+
+/* CARD */
+.starwars-produtos .produto-card{
+    background:#25293d;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.starwars-produtos .produto-card img{
+    width:100%;
+    height:160px;
+    object-fit:contain;
+}
+
+.starwars-produtos h3{
+    font-size:12px;
+    margin:10px 0;
+}
+
+.parcelemnto{
+    font-size:12px;
+    color:#aaa;
+}
+
+.pix{
+    color:#8a4fff;
+    font-weight:700;
+    margin:5px 0;
+}
+
+.starwars-produtos button{
+    border:2px solid #8a4fff;
+    background:transparent;
+    color:white;
+    padding:8px 15px;
+    cursor:pointer;
+}
+
+.starwars-produtos button:hover{
+    background:#8a4fff;
+}
+
+
+
+
+
+
+/* PAGINA LOGIN */
+.login-pagina{
+    padding:60px;
+    background:#1b1e2e;
+    color:white;
+}
+
+
+.login-title{
+    text-align:center;
+    font-size:14px;
+    color:#b86cff;
+    margin-bottom:40px;
+    border-bottom:2px solid #8a4fff;
+    padding-bottom:10px;
+}
+
+
+
+/* CONTAINER */
+.login-container{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+}
+
+
+
+/* BOX */
+.login-box{
+    width:400px;
+}
+
+.login-box h3{
+    margin-bottom:20px;
+    font-size:14px;
+    border-bottom:1px solid #444;
+    padding-bottom:10px;
+}
+
+
+
+/* INPUTS */
+.login-box label{
+    display:block;
+    font-size:12px;
+    margin-top:15px;
+}
+
+.login-box input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    background:#2b2f45;
+    border:1px solid #555;
+    color:white;
+}
+
+
+
+/* BOTÕES */
+.btn-roxo{
+    margin-top:15px;
+    background:#8a4fff;
+    border:none;
+    padding:8px 20px;
+    color:white;
+    cursor:pointer;
+}
+
+.btn-roxo:hover{
+    background:#6f39d9;
+}
+
+
+.btn-google{
+    margin-top:15px;
+    background:#8a4fff;
+    border:none;
+    padding:8px 20px;
+    color:white;
+    cursor:pointer;
+    width:100%;
+}
+
+
+
+/* TEXTO ESQUECEU SENHA */
+.esquecido{
+    color:#b86cff;
+    font-size:12px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+
